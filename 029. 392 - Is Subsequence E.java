@@ -15,22 +15,16 @@ class Solution {
         
         while(j < t.length()){
              
-          if(i < s.length())  {
             if(s.charAt(i) != t.charAt(j)){
                 j++;
-            } else if(s.charAt(i) == t.charAt(j)){
+            } else{
                 i++;
-                j++;
+                j++;   
+                if(i == s.length())
+                    return true;
             } 
-          }else{
-              return true;
-          }
-               
-        }
-        
-        if(i == s.length() && j == t.length())
-            return true;
-        else
+          }       
+
             return false;
     }
 }
